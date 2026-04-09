@@ -1,0 +1,87 @@
+<article class="post-detail">
+  <header class="post-header">
+    <span class="category"><%- page.categories && page.categories.length ? page.categories.data[0].name : 'Thoughts' %></span>
+    <h1><%- page.title %></h1>
+    <div class="post-meta">
+      Published on <time datetime="<%- date_xml(page.date) %>"><%- date(page.date, "MMMM D, YYYY") %></time>
+    </div>
+  </header>
+
+  <% if (page.cover) { %>
+    <div class="post-hero-image">
+      <img src="<%- page.cover %>" alt="<%- page.title %>">
+    </div>
+  <% } %>
+
+  <% if (toc(page.content) !== '') { %>
+    <aside class="post-toc" id="post-toc">
+      <div class="toc-header">
+        <span class="toc-title">Contents</span>
+        <button class="action-btn hover-target toc-toggle" id="toc-toggle" aria-label="Toggle TOC">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+      </div>
+      <div class="toc-content">
+        <%- toc(page.content, {list_number: false}) %>
+      </div>
+    </aside>
+  <% } %>
+
+  <% if (page.password) { %>
+    <div id="pwd-gate" style="text-align: center; padding: 100px 0;">
+      <svg style="margin: 0 auto 24px; color: var(--text-secondary); width: 64px; height: 64px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+      <h2 style="font-family: 'Bricolage Grotesque'; font-size: 32px; color: var(--text-primary); margin-bottom: 32px;">This article is encrypted.</h2>
+      <div style="display: flex; gap: 8px; justify-content: center; max-width: 400px; margin: 0 auto;">
+          <input type="password" id="pwd-input" placeholder="Enter security key..." style="flex: 1; padding: 12px 20px; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--glass-bg); color: var(--text-primary); font-family: 'Outfit'; outline: none; font-size: 16px;">
+          <button id="pwd-btn" style="padding: 12px 24px; background: #ef4444; color: #fff; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);">Decrypt</button>
+      </div>
+      <p id="pwd-error" style="color: #ef4444; font-size: 14px; margin-top: 16px; opacity: 0; transition: opacity 0.3s;">Access Denied. Invalid key.</p>
+    </div>
+    
+    <div id="protected-content" class="post-content" style="display: none;">
+      <%- page.content %>
+    </div>
+    <%- `<script>
+      const btn = document.getElementById('pwd-btn');
+      const input = document.getElementById('pwd-input');
+      const unlock = () => {
+        if(input.value === '${page.password}') {
+          document.getElementById('pwd-gate').style.display = 'none';
+          document.getElementById('protected-content').style.display = 'block';
+        } else {
+          document.getElementById('pwd-error').style.opacity = '1';
+        }
+      };
+      btn.addEventListener('click', unlock);
+      input.addEventListener('keypress', (e) => { if(e.key === 'Enter') unlock(); });
+    </script>` %>
+  <% } else { %>
+    <div class="post-content">
+      <%- page.content %>
+    </div>
+  <% } %>
+
+  <!-- Floating Pagination (Prev/Next) -->
+  <%
+    var isLocked = !!page.password;
+    var validPrev = page.prev;
+    while(validPrev && !!validPrev.password !== isLocked) { validPrev = validPrev.prev; }
+    
+    var validNext = page.next;
+    while(validNext && !!validNext.password !== isLocked) { validNext = validNext.next; }
+  %>
+  <div class="floating-pagination">
+    <% if (validPrev) { %>
+      <a href="<%- url_for(validPrev.path) %>" class="float-btn float-prev hover-target" title="上一篇文章 / Previous">
+        <span class="float-btn-label">上一篇</span>
+        <span class="float-btn-title"><%- validPrev.title %></span>
+      </a>
+    <% } %>
+    <% if (validNext) { %>
+      <a href="<%- url_for(validNext.path) %>" class="float-btn float-next hover-target" title="下一篇文章 / Next">
+        <span class="float-btn-label">下一篇</span>
+        <span class="float-btn-title"><%- validNext.title %></span>
+      </a>
+    <% } %>
+  </div>
+</article>

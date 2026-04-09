@@ -89,13 +89,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Code Copy Button Injection & Logic
     const highlights = document.querySelectorAll('.post-content figure.highlight');
     highlights.forEach(figure => {
+        const table = figure.querySelector('table');
+        if (table) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'code-wrapper';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        }
+
         const btn = document.createElement('button');
         btn.className = 'code-copy-btn';
         btn.textContent = 'Copy';
         figure.insertBefore(btn, figure.firstChild);
 
         btn.addEventListener('click', () => {
-            // Hexo creates a .code pre block for the raw code text
             const codeEl = figure.querySelector('.code pre');
             if (!codeEl) return;
             const codeText = codeEl.innerText;
@@ -114,7 +121,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Post Hero Image 3D Parallax Hover
+    // 6. Markmap Mindmap Initialization
+    const mindmaps = document.querySelectorAll('.post-content .markmap');
+    mindmaps.forEach(el => {
+        if (typeof markmap !== 'undefined') {
+            const { Markmap, loadCSS, loadJS } = markmap;
+            const content = el.textContent.trim();
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            
+            // Put it in a container if needed
+            const container = el.closest('.mindmap-container') || el.parentNode;
+            container.innerHTML = '';
+            container.appendChild(svg);
+            
+            const { Transformer } = markmap;
+            const transformer = new Transformer();
+            const { root, features } = transformer.transform(content);
+            const { styles, scripts } = transformer.getAssets();
+            if (styles) loadCSS(styles);
+            if (scripts) loadJS(scripts, { getMarkmap: () => markmap });
+            
+            Markmap.create(svg, null, root);
+        }
+    });
+
+    // 7. Post Hero Image 3D Parallax Hover
     const heroContainer = document.querySelector('.post-hero-image');
     if (heroContainer) {
         const img = heroContainer.querySelector('img');

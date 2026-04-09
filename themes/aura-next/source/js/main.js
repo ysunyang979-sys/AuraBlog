@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.createElement('button');
         btn.className = 'code-copy-btn';
         btn.textContent = 'Copy';
-        figure.appendChild(btn);
+        figure.insertBefore(btn, figure.firstChild);
 
         btn.addEventListener('click', () => {
             // Hexo creates a .code pre block for the raw code text

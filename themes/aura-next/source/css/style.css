@@ -270,7 +270,7 @@ body {
     box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 }
 .post-hero-image img { width: 100%; height: 100%; object-fit: cover; }
-.post-content { font-family: 'Bricolage Grotesque', 'FangSong', 'STFangsong', serif; font-size: 18px; line-height: 1.8; color: var(--text-primary); font-weight: 400; opacity: 0.9; transition: color 0.5s ease; letter-spacing: 0.5px; }
+.post-content { font-family: 'Bricolage Grotesque', 'FangSong', 'STFangsong', serif; font-size: 18px; line-height: 1.8; color: var(--text-primary); font-weight: 500; opacity: 1; transition: color 0.5s ease; letter-spacing: 0.5px; }
 .post-content p { margin-bottom: 32px; }
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 { 
     font-family: 'Bricolage Grotesque', 'Microsoft YaHei', '微软雅黑', sans-serif; 
@@ -311,7 +311,25 @@ body {
     border: 1px solid var(--glass-border);
     position: relative;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    overflow: hidden;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(147, 51, 234, 0.3) transparent;
+}
+
+/* Custom Scrollbar for Code Blocks */
+.post-content figure.highlight::-webkit-scrollbar {
+    width: 6px;
+}
+.post-content figure.highlight::-webkit-scrollbar-track {
+    background: transparent;
+}
+.post-content figure.highlight::-webkit-scrollbar-thumb {
+    background: rgba(147, 51, 234, 0.2);
+    border-radius: 10px;
+}
+.post-content figure.highlight::-webkit-scrollbar-thumb:hover {
+    background: rgba(147, 51, 234, 0.5);
 }
 .post-content figure.highlight table { width: 100%; border-spacing: 0; border-collapse: collapse; margin: 0; border: none; }
 .post-content figure.highlight tbody, .post-content figure.highlight tr { border: none; }
@@ -341,15 +359,19 @@ body {
 
 /* Copy Button */
 .post-content figure.highlight .code-copy-btn {
-    position: absolute; top: 12px; right: 12px;
+    position: sticky; 
+    top: 12px; 
+    float: right; 
+    margin-right: 12px;
+    z-index: 99;
     background: var(--glass-bg); border: 1px solid var(--glass-border);
     color: var(--text-secondary); border-radius: 6px; padding: 4px 10px;
     font-size: 12px; font-weight: 500; font-family: 'Outfit', sans-serif;
     cursor: pointer; opacity: 0; transition: all 0.3s;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
 }
 .post-content figure.highlight:hover .code-copy-btn { opacity: 1; }
-.post-content figure.highlight .code-copy-btn:hover { background: var(--text-primary); color: var(--bg); }
+.post-content figure.highlight .code-copy-btn:hover { background: var(--text-primary); color: var(--bg); opacity: 1; }
 .post-content figure.highlight .code-copy-btn.copied { background: #10b981; border-color: #10b981; color: white; opacity: 1; }
 
 /* Table of Contents */

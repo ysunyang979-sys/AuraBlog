@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ""
-description: ""
+title: AuraBlog
+subtitle: "Creative Space & Tech Thoughts"
+description: "A premium glassmorphism blog experience."
 keywords:
-author: John Doe
-language: en
-timezone: ""
+author: Aura
+language: zh-CN
+timezone: "Asia/Shanghai"
+favicon: /favicon.png
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

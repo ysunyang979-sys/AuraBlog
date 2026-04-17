@@ -211,22 +211,23 @@ a, button, .hover-target, .tag-btn, .float-btn, .action-btn,
     }
     .nav-middle { 
         grid-column: 1 / span 2;
-        width: calc(100% + 40px);
-        margin: 4px -20px -4px;
-        padding: 8px 20px;
-        gap: 20px !important; 
+        width: 100%;
+        margin: 8px 0 -4px;
+        padding: 8px 0;
+        gap: 24px !important; 
         overflow-x: auto; 
         white-space: nowrap;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
         scrollbar-width: none; 
         -webkit-overflow-scrolling: touch;
-        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     }
     .nav-middle::-webkit-scrollbar { display: none; }
     .nav-middle a { 
         font-size: 13px; 
-        font-weight: 600;
+        font-weight: 700;
         opacity: 0.6;
+        padding: 4px 8px;
     }
     .nav-middle a.active {
         opacity: 1;
@@ -283,6 +284,16 @@ a, button, .hover-target, .tag-btn, .float-btn, .action-btn,
     padding: 0 8%;
     overflow: hidden;
     background: var(--bg);
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 6% 80px;
+        overflow: visible;
+        display: block;
+    }
 }
 
 .home-hero::after {
@@ -484,6 +495,34 @@ a, button, .hover-target, .tag-btn, .float-btn, .action-btn,
     font-weight: 500;
 }
 
+@media (max-width: 768px) {
+    .category-card {
+        padding: 16px 20px;
+        min-width: unset;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .card-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    }
+    .card-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    .card-title {
+        font-size: 17px;
+    }
+    .hero-tagline {
+        margin-bottom: 32px;
+        font-size: 1rem;
+    }
+    .hero-category-grid {
+        margin-bottom: 40px;
+    }
+}
+
 .fade-in-up {
     opacity: 0;
     animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -499,7 +538,20 @@ a, button, .hover-target, .tag-btn, .float-btn, .action-btn,
 .hero-actions {
     display: flex;
     gap: 20px;
-    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both 0.7s;
+    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 1) both 0.7s;
+}
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .primary-btn, .secondary-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
 }
 
 .primary-btn {

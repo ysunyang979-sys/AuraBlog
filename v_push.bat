@@ -3,18 +3,25 @@ echo ========================================
 echo   BLOG DEPLOY SYSTEM
 echo ========================================
 echo.
+
+:: Optimize for 241MB push
+git config http.postBuffer 524288000
+
 echo [1/3] Adding changes...
 git add .
-echo.
+
 echo [2/3] Committing changes...
-set /p msg="Enter commit message: "
-if "%msg%"=="" set msg="Update blog"
-git commit -m "%msg%"
-echo.
+git commit -m "Auto deploy"
+
 echo [3/3] Pushing to GitHub...
 git push origin main
-echo.
-echo ========================================
-echo   COMPLETE: Your blog is now live!
-echo ========================================
+
+if %errorlevel% neq 0 (
+    echo.
+    echo ERROR: Push failed. Check V2Ray.
+) else (
+    echo.
+    echo SUCCESS: Blog is live!
+)
+
 pause

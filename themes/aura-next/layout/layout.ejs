@@ -14,14 +14,16 @@
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
   <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+
   <script>
-    // Instant dark mode initialization to prevent FOUC (Flash of Unstyled Content)
+    // Instant dark mode initialization to prevent FOUC
     if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.setAttribute('data-theme', 'dark');
     }
   </script>
 </head>
-<body>
+<body class="<%= is_home() ? 'is-home' : '' %>">
   <!-- Ambient background elements -->
   <div class="ambient-glow"></div>
   <div class="ambient-glow"></div>
@@ -41,7 +43,7 @@
       <a href="/tags" class="hover-target">Tags</a>
       <a href="/projects" class="hover-target">Projects</a>
       <a href="/about" class="hover-target">About</a>
-      <a href="/locked" class="hover-target" style="color: #ef4444;">Locked</a>
+      <a href="/locked" class="hover-target nav-locked">Locked</a>
     </div>
 
     <!-- NEW: Functional & Decorative Buttons -->
@@ -64,7 +66,7 @@
     </div>
   </nav>
 
-  <main id="swup" class="transition-fade">
+  <main>
     <%- body %>
   </main>
 

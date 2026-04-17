@@ -1,7 +1,8 @@
 ---
-title: About Me
+title: About Me.
+cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjT295-ekit0wFFak54ypSqgzls6rnBWxhrQ&s"
+tag: ai
 type: "about"
-cover: "https://pic.5tu.cn/uploads/allimg/2410/pic_5tu_big_6672913_670a23e0301ff-thumb-650.jpg"
 ---
 
 Welcome to my creative notebook and digital garden.

@@ -1,17 +1,21 @@
 <div class="archive-page" id="swup-archive">
-  <div class="archive-header">
-    <h1>All Thoughts.</h1>
-    <p class="archive-desc" style="color: var(--text-secondary); font-size: 16px;">A collection of creative explorations and notes.</p>
+  <div class="post-header-box-container reveal">
+    <div class="post-header-box" id="tilt-header" style="--theme-accent: #9333ea; --theme-accent-rgb: 147, 51, 234;">
+      <div class="header-box-content">
+        <div class="post-badge">Database: Chronicles</div>
+        <h1 class="post-title-main">Archives.</h1>
+        <p style="margin-top: 32px; color: var(--text-secondary); font-weight: 600; font-size: 16px; opacity: 0.8; letter-spacing: 0.1em; text-transform: uppercase;">A collection of creative explorations and notes.</p>
+      </div>
+      <div class="header-box-decoration"></div>
+    </div>
   </div>
   
   <div class="archive-grid">
     <% page.posts.forEach(function(post){ %>
-      <% if (!post.password) { %>
-        <a href="<%- url_for(post.path) %>" class="archive-panel hover-target">
-          <span class="archive-panel-date"><%- date(post.date, "MMM D, YYYY") %></span>
-          <h3 class="archive-panel-title"><%- post.title %></h3>
-        </a>
-      <% } %>
+      <a href="<%- url_for(post.path) %>" class="archive-panel hover-target">
+        <span class="archive-panel-date"><%- date(post.date, "MMM D, YYYY") %></span>
+        <h3 class="archive-panel-title"><%- post.title || 'Untitled Thought' %></h3>
+      </a>
     <% }) %>
   </div>
 

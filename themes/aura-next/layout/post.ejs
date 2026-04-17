@@ -1,20 +1,119 @@
 <article class="post-detail">
-  <header class="post-header">
-    <span class="category"><%- page.categories && page.categories.length ? page.categories.data[0].name : 'Thoughts' %></span>
-    <h1><%- page.title %></h1>
-    <div class="post-meta">
-      Published on <time datetime="<%- date_xml(page.date) %>"><%- date(page.date, "MMMM D, YYYY") %></time>
-    </div>
-  </header>
+<% 
+    var mainTag = page.tag || (page.tags && page.tags.length ? page.tags.data[0].name : 'Thoughts'); 
+    
+    // Premium Design-Forward Palette
+    var palette = [
+      { accent: '#9333ea', rgb: '147, 51, 234' }, // Royal Purple
+      { accent: '#3b82f6', rgb: '59, 130, 246' }, // Oceanic Blue
+      { accent: '#06b6d4', rgb: '6, 182, 212' },   // Cyber Cyan
+      { accent: '#f97316', rgb: '249, 115, 22' },  // Neon Orange
+      { accent: '#f43f5e', rgb: '244, 63, 94' },   // Rose Pink
+      { accent: '#10b981', rgb: '16, 185, 129' },  // Emerald Sea
+      { accent: '#6366f1', rgb: '99, 102, 241' },  // Indigo Mist
+      { accent: '#8b5cf6', rgb: '139, 92, 246' }   // Violet Glow
+    ];
 
-  <% if (page.cover) { %>
-    <div class="post-hero-image">
-      <img src="<%- page.cover %>" alt="<%- page.title %>">
+    // Simple deterministic hash to pick a color
+    var hash = 0;
+    var tagStr = String(mainTag).toLowerCase();
+    for (var i = 0; i < tagStr.length; i++) {
+      hash = tagStr.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    var colorIndex = Math.abs(hash) % palette.length;
+    var theme = palette[colorIndex];
+
+    // Manual overrides for specific core tags (optional, for even better curation)
+    if (tagStr === 'ai') theme = { accent: '#06b6d4', rgb: '6, 182, 212' };
+    if (tagStr === '科学上网') theme = { accent: '#9333ea', rgb: '147, 51, 234' };
+    if (tagStr === '软件') theme = { accent: '#f97316', rgb: '249, 115, 22' };
+  %>
+  <div class="post-header-box-container reveal">
+    <div class="post-header-box" id="tilt-header" style="--theme-accent: <%= theme.accent %>; --theme-accent-rgb: <%= theme.rgb %>;">
+      <div class="header-box-content">
+        <div class="post-badge"><%= mainTag %></div>
+        <h1 class="post-title-main"><%- page.title %></h1>
+      </div>
+      <div class="header-box-decoration"></div>
     </div>
-  <% } %>
+  </div>
+
+  <script>
+    (function() {
+      const card = document.getElementById('tilt-header');
+      if (!card) return;
+
+      let rect = card.getBoundingClientRect();
+      let targetX = 0, targetY = 0;
+      let currentX = 0, currentY = 0;
+      let isHovering = false;
+      let rafId = null;
+      
+      // Premium interactive spotlight glare
+      const glare = document.createElement('div');
+      glare.className = 'header-glare';
+      card.appendChild(glare);
+
+      card.addEventListener('mouseenter', () => {
+        rect = card.getBoundingClientRect();
+        isHovering = true;
+        if (!rafId) rafId = requestAnimationFrame(updateTilt);
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        targetX = ((x - centerX) / centerX) * 12; // Dynamic 12 degree range
+        targetY = ((y - centerY) / centerY) * -12;
+        
+        // Spotlight tracks exactly with pointer position
+        glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.7) 0%, transparent 60%)`;
+        glare.style.opacity = '1';
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isHovering = false;
+        targetX = 0;
+        targetY = 0;
+        glare.style.opacity = '0';
+      });
+      
+      const lerp = (start, end, factor) => start + (end - start) * factor;
+
+      const updateTilt = () => {
+        currentX = lerp(currentX, targetX, 0.12);
+        currentY = lerp(currentY, targetY, 0.12);
+        
+        const content = card.querySelector('.header-box-content');
+        if (content) {
+             content.style.transform = `translateZ(60px) scale(0.98)`;
+             content.style.transition = 'none';
+        }
+        
+        card.style.transform = `perspective(2000px) rotateX(${currentY}deg) rotateY(${currentX}deg) scale3d(${isHovering ? 1.02 : 1}, ${isHovering ? 1.02 : 1}, ${isHovering ? 1.02 : 1})`;
+        card.style.transition = 'none'; // Kill CSS transitions inside rAF to prevent brutal jank!
+        
+        if (!isHovering && Math.abs(currentX) < 0.01 && Math.abs(currentY) < 0.01) {
+            card.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            card.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            if (content) {
+                 content.style.transform = 'translateZ(0) scale(1)';
+                 content.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            }
+            rafId = null;
+            return;
+        }
+        rafId = requestAnimationFrame(updateTilt);
+      };
+    })();
+  </script>
 
   <% if (toc(page.content) !== '') { %>
-    <aside class="post-toc" id="post-toc">
+    <aside class="post-toc" id="post-toc" <% if (page.password) { %>style="display: none;"<% } %>>
       <div class="toc-header">
         <span class="toc-title">Contents</span>
         <button class="action-btn hover-target toc-toggle" id="toc-toggle" aria-label="Toggle TOC">
@@ -41,23 +140,38 @@
     <div id="protected-content" class="post-content" style="display: none;">
       <%- page.content %>
     </div>
-    <%- `<script>
-      const btn = document.getElementById('pwd-btn');
-      const input = document.getElementById('pwd-input');
-      const unlock = () => {
-        if(input.value === '${page.password}') {
-          document.getElementById('pwd-gate').style.display = 'none';
-          document.getElementById('protected-content').style.display = 'block';
-        } else {
-          document.getElementById('pwd-error').style.opacity = '1';
-        }
-      };
-      btn.addEventListener('click', unlock);
-      input.addEventListener('keypress', (e) => { if(e.key === 'Enter') unlock(); });
-    </script>` %>
+    <script>
+      (function() {
+        const btn = document.getElementById('pwd-btn');
+        const input = document.getElementById('pwd-input');
+        const unlock = () => {
+          if(input.value === '<%= page.password %>') {
+            document.getElementById('pwd-gate').style.display = 'none';
+            document.getElementById('protected-content').style.display = 'block';
+            // Show TOC if it exists (re-rendered or unhidden)
+            const toc = document.getElementById('post-toc');
+            if(toc) toc.style.display = 'block';
+          } else {
+            document.getElementById('pwd-error').style.opacity = '1';
+          }
+        };
+        btn.addEventListener('click', unlock);
+        input.addEventListener('keypress', (e) => { if(e.key === 'Enter') unlock(); });
+      })();
+    </script>
   <% } else { %>
     <div class="post-content">
       <%- page.content %>
+    </div>
+  <% } %>
+
+  <% if (page.tags && page.tags.length) { %>
+    <div class="post-tags-container">
+      <% page.tags.forEach(function(tag) { %>
+        <a href="<%- url_for(tag.path) %>" class="tag-btn hover-target">
+          <%= tag.name %>
+        </a>
+      <% }) %>
     </div>
   <% } %>
 

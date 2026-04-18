@@ -1,7 +1,6 @@
 ---
 title: Github
 cover: "https://img.top/api/anime?rand=22974"
-tag: 软件
 password: 358966
 permalink: SearchFile/网站/GCat.html
 ---

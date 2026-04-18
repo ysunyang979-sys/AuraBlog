@@ -1,7 +1,7 @@
 ---
 title: Prompt
 cover: "https://api.kdcc.cn/img/?rand=66185"
-tag: 软件
+tag: AI
 permalink: SearchFile/AI/prompt.html
 ---
 

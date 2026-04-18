@@ -1,7 +1,7 @@
 ---
-title: Windsurf Cascade
+title: Windsurf 
 cover: "https://img.top/api/anime?rand=69579"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/Windsurf Cascade.html
 ---
 

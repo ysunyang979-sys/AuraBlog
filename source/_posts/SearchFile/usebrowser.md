@@ -1,5 +1,5 @@
 ---
-title: 资源搜索之搜索引擎
+title: 资源搜索技巧
 cover: "https://api.kdcc.cn/img/?rand=22130"
 tag: 软件
 permalink: SearchFile/usebrowser.html

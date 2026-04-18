@@ -1,7 +1,7 @@
 ---
 title: Skills编写规则
 cover: "https://img.top/api/anime?rand=28798"
-tag: 软件
+tag: AI
 permalink: SearchFile/AI/Skills.html
 ---
 

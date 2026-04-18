@@ -1,5 +1,5 @@
 ---
-title: 资源搜索之Telegram
+title: Telegram教程
 cover: "https://img.top/api/anime?rand=38874"
 tag: 软件
 permalink: SearchFile/usetg.html

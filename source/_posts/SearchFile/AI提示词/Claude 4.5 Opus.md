@@ -1,7 +1,7 @@
 ---
 title: Claude 4.5 Opus
 cover: "https://images.steamusercontent.com/ugc/1772700592825525726/A39E794D28AC5C2333E00BC3FCD1A8D6250EDA30/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/Claude 4.5 Opus.html
 ---
 

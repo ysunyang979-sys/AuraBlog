@@ -1,7 +1,6 @@
 ---
 title: Steam
 cover: "https://img.top/api/anime?rand=65020"
-tag: 软件
 password: 358966
 permalink: SearchFile/网站/steam.html
 ---

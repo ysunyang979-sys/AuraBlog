@@ -1,7 +1,6 @@
 ---
 title: TG
 cover: "https://www.dmoe.cc/test.php?rand=27102"
-tag: 软件
 password: 358966
 permalink: SearchFile/网站/tgg.html
 ---

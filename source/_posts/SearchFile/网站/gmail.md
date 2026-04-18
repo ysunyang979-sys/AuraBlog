@@ -1,7 +1,7 @@
 ---
 title: Gmail
 cover: "https://api.kdcc.cn/img/?rand=81209"
-tag: 软件
+
 password: 358966
 permalink: SearchFile/网站/gmail.html
 ---

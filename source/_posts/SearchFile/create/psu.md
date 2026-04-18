@@ -1,7 +1,8 @@
 ---
-title: 一键搭建科学上网工具ProxySU
+title: ProxySU教程
 cover: "https://www.dmoe.cc/test.php?rand=47163"
-tag: 软件
+tag: 科学上网
+
 permalink: SearchFile/create/psu.html
 ---
 

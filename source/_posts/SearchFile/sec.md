@@ -1,7 +1,6 @@
 ---
 title: 358966 No Oo Oo Mo
 cover: "https://img.top/api/anime?rand=10775"
-tag: 软件
 password: 358966
 permalink: SearchFile/sec.html
 ---

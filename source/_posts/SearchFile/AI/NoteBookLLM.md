@@ -1,7 +1,7 @@
 ---
 title: NoteBookLLM
 cover: "https://api.kdcc.cn/img/?rand=49961"
-tag: 软件
+tag: AI
 permalink: SearchFile/AI/NoteBookLLM.html
 ---
 

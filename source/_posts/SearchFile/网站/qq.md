@@ -1,7 +1,7 @@
 ---
 title: QQ
 cover: "https://api.paugram.com/wallpaper/?rand=44931"
-tag: 软件
+
 password: 358966
 permalink: SearchFile/网站/qq.html
 ---

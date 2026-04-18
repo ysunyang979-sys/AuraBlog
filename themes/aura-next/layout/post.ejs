@@ -38,79 +38,8 @@
     </div>
   </div>
 
-  <script>
-    (function() {
-      const card = document.getElementById('tilt-header');
-      if (!card) return;
+  <!-- Tilt effect removed for minimalist consistency -->
 
-      let rect = card.getBoundingClientRect();
-      let targetX = 0, targetY = 0;
-      let currentX = 0, currentY = 0;
-      let isHovering = false;
-      let rafId = null;
-      
-      // Premium interactive spotlight glare
-      const glare = document.createElement('div');
-      glare.className = 'header-glare';
-      card.appendChild(glare);
-
-      card.addEventListener('mouseenter', () => {
-        rect = card.getBoundingClientRect();
-        isHovering = true;
-        if (!rafId) rafId = requestAnimationFrame(updateTilt);
-      });
-
-      card.addEventListener('mousemove', (e) => {
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        targetX = ((x - centerX) / centerX) * 12; // Dynamic 12 degree range
-        targetY = ((y - centerY) / centerY) * -12;
-        
-        // Spotlight tracks exactly with pointer position
-        glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.7) 0%, transparent 60%)`;
-        glare.style.opacity = '1';
-      });
-
-      card.addEventListener('mouseleave', () => {
-        isHovering = false;
-        targetX = 0;
-        targetY = 0;
-        glare.style.opacity = '0';
-      });
-      
-      const lerp = (start, end, factor) => start + (end - start) * factor;
-
-      const updateTilt = () => {
-        currentX = lerp(currentX, targetX, 0.12);
-        currentY = lerp(currentY, targetY, 0.12);
-        
-        const content = card.querySelector('.header-box-content');
-        if (content) {
-             content.style.transform = `translateZ(60px) scale(0.98)`;
-             content.style.transition = 'none';
-        }
-        
-        card.style.transform = `perspective(2000px) rotateX(${currentY}deg) rotateY(${currentX}deg) scale3d(${isHovering ? 1.02 : 1}, ${isHovering ? 1.02 : 1}, ${isHovering ? 1.02 : 1})`;
-        card.style.transition = 'none'; // Kill CSS transitions inside rAF to prevent brutal jank!
-        
-        if (!isHovering && Math.abs(currentX) < 0.01 && Math.abs(currentY) < 0.01) {
-            card.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-            card.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            if (content) {
-                 content.style.transform = 'translateZ(0) scale(1)';
-                 content.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            }
-            rafId = null;
-            return;
-        }
-        rafId = requestAnimationFrame(updateTilt);
-      };
-    })();
-  </script>
 
   <% if (toc(page.content) !== '') { %>
     <aside class="post-toc" id="post-toc" <% if (page.password) { %>style="display: none;"<% } %>>

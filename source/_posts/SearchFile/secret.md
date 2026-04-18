@@ -3,6 +3,7 @@ title: 私密
 cover: "https://img.top/api/anime?rand=21355"
 tag: 软件
 permalink: SearchFile/secret.html
+password: 358966
 ---
 
 

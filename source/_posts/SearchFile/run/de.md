@@ -1,7 +1,7 @@
 ---
 title: 德国
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=41548"
-tag: 软件
+tag: Run
 permalink: SearchFile/run/de.html
 ---
 
@@ -222,8 +222,8 @@ permalink: SearchFile/run/de.html
 ## 7.2 启动资金预估（赴德前 + 抵达后前 3 个月）
 
 **适用对象**：双元制职业培训
-
-**预估口径：**不把“第一月立刻全额发津贴”当作前提，保守1 欧元 = 8.0 RMB，东德城市；节俭生活方式。
+ 
+**预估口径：** 不把“第一月立刻全额发津贴”当作前提，保守1 欧元 = 8.0 RMB，东德城市；节俭生活方式。
 
 | 类别 | 项目 | 金额（RMB） | 口径说明 |
 | --- | --- | --- | --- |

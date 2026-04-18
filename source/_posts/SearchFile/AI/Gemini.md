@@ -1,7 +1,7 @@
 ---
 title: Gemini 3
 cover: "https://api.kdcc.cn/img/?rand=70049"
-tag: 软件
+tag: AI
 permalink: SearchFile/AI/Gemini.html
 ---
 

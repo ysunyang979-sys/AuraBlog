@@ -1,7 +1,7 @@
 ---
 title: Ysystem
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=51956"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/Ysystem.html
 ---
 

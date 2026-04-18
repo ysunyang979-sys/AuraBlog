@@ -1,9 +1,13 @@
 ---
 title: 手机软件
-cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=92704"
-tag: 软件
+date: 2025-12-28 23:15:00
+type: "CustomPage"
+layout: "page"
+comments: false
 permalink: SearchFile/mobile.html
 ---
+---
+
 
 ###### VPN
 <a href="https://api.358966.xyz/api/download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlSWQiOjE4LCJyMktleSI6InVwbG9hZHMvMS8xNzY3Njk5NDkyMjYyLTk3M2E2YjRmLVYycmF5TkcuYXBrIiwiZXhwIjo0OTIxMzA2Mzc3fQ.ha1E02LsdkJeLCUtpuF1lc6HCT1rtqYm8tXfaMWxhlQ" class="btn">V2rayNG</a> <a href="https://api.358966.xyz/api/download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlSWQiOjE3LCJyMktleSI6InVwbG9hZHMvMS8xNzY3Njk5NDA3MTUyLTVjMTBkMWJkLUFQS1B1cmUuYXBrIiwiZXhwIjo0OTIxMzA2NDE2fQ.DnFlwgok0MsYBBopcV1PhRVT2tP4AhBgtvJ17hwMicY" class="btn">APKPure</a><a href="https://api.358966.xyz/api/download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlSWQiOjE1LCJyMktleSI6InVwbG9hZHMvMS8xNzY3Njk5Mjg2MzIyLTMwYmIwNjBiLV9fX19fLmFwayIsImV4cCI6NDkyMTMwNjQyOX0.tT8aRwmuyf6KQvPMWmVD9dVrp9D0K9KkImNY5FDo_0k" class="btn">原子加速器</a><a href="https://api.358966.xyz/api/download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlSWQiOjE0LCJyMktleSI6InVwbG9hZHMvMS8xNzY3Njk4NjA0MTg1LWFjZWFjZjNlLV9fVlBOLmFwayIsImV4cCI6NDkyMTMwNjQ3NH0.4Bw80rrHzvV6MpGvlaESuauNGQexcfllHi2oV9PGiKg" class="btn">绿茶VPN</a><a href="https://api.358966.xyz/api/download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlSWQiOjIxLCJyMktleSI6InVwbG9hZHMvMS8xNzY3NzA3NDY2MzI1LWNhNGRjOGMzLV9fX18uYXBrIiwiZXhwIjo0OTIxMzA5MTQyfQ.m2Oc7lX3Ucl94vhDIDKsS9yMyFM0W-N_-9epfS1B2SM" class="btn">落雪音乐</a>

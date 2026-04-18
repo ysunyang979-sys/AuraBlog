@@ -1,7 +1,7 @@
 ---
 title: Yaml
 cover: "https://api.kdcc.cn/img/?rand=45630"
-tag: 软件
+tag: AI
 permalink: SearchFile/AI/YAML.html
 ---
 YAML (YAML Ain't Markup Language) 是一种以数据为中心、对人类友好的数据序列化语言。它因其简洁和高可读性而备受青睐，尤其是在配置文件和知识管理领域。

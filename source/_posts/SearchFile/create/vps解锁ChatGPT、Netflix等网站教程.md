@@ -1,5 +1,5 @@
 ---
-title: vps解锁ChatGPT、Netflix等网站教程
+title: vps解锁外网
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=44872"
 tag: 科学上网
 permalink: SearchFile/create/vps解锁ChatGPT、Netflix等网站教程.html

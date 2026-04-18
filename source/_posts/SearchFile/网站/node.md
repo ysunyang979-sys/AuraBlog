@@ -1,7 +1,6 @@
 ---
 title: Node
 cover: "https://api.paugram.com/wallpaper/?rand=76558"
-tag: 软件
 password: 358966
 permalink: SearchFile/网站/node.html
 ---

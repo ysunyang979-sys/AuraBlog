@@ -1,7 +1,7 @@
 ---
 title: Manus
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=63136"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/Manus.html
 ---
 

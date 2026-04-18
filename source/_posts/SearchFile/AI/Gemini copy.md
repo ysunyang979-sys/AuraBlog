@@ -1,7 +1,7 @@
 ---
 title: Gemini 3
 cover: "https://api.kdcc.cn/img/?rand=73348"
-tag: 软件
+tag: AI
 permalink: SearchFile/AI/Gemini copy.html
 ---
 # 🚀 全栈开发新范式：5步通过 Vibe Coding 打造你的第一个 AI 应用

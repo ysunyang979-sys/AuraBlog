@@ -1,5 +1,5 @@
 ---
-title: 自建ss服务器教程
+title: 自建ss教程
 cover: "https://api.paugram.com/wallpaper/?rand=71656"
 tag: 科学上网
 permalink: SearchFile/create/ss.html

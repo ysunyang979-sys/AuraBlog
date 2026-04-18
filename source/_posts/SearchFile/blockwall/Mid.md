@@ -1,7 +1,7 @@
 ---
 title: MID
 cover: "https://img.top/api/anime?rand=53313"
-tag: 软件
+tag: 科学上网
 permalink: SearchFile/blockwall/Mid.html
 ---
 

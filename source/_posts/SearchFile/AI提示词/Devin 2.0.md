@@ -1,7 +1,7 @@
 ---
 title: Devin 2.0
 cover: "https://img.netbian.com/file/2023/0509/0009150XxBL.jpg"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/Devin 2.0.html
 ---
 

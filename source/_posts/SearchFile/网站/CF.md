@@ -1,7 +1,6 @@
 ---
 title: CloudFlare
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=39057"
-tag: 软件
 password: 358966
 permalink: SearchFile/网站/CF.html
 ---

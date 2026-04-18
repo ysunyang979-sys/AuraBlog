@@ -1,7 +1,6 @@
 ---
 title: Discord
 cover: "https://api.kdcc.cn/img/?rand=84689"
-tag: 软件
 password: 358966
 permalink: SearchFile/网站/discord.html
 ---

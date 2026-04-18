@@ -1,7 +1,7 @@
 ---
 title: 域名注册并托管CF
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=82296"
-tag: 软件
+tag: 科学上网
 permalink: SearchFile/blockwall/DoRegister.html
 ---
 >准备网站：

@@ -1,5 +1,5 @@
 ---
-title: 自建trojan服务器教程
+title: 自建trojan教程
 cover: "https://img.top/api/anime?rand=79040"
 tag: 科学上网
 permalink: SearchFile/create/tj.html

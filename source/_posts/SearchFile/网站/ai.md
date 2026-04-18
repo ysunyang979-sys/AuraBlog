@@ -1,9 +1,9 @@
 ---
-title: 高度翻墙
+title: AI账号
 cover: "https://api.kdcc.cn/img/?rand=15794"
-tag: 科学上网
 password: 358966
 permalink: tools/AI.html
+
 ---
 
 

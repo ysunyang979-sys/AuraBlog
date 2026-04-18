@@ -1,7 +1,7 @@
 ---
 title: ChatGPT 5
 cover: "https://img.top/api/anime?rand=79495"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/GPT5.html
 ---
 

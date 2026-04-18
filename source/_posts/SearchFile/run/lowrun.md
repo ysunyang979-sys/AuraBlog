@@ -1,7 +1,7 @@
 ---
 title: 低成本学润推介
 cover: "https://api.kdcc.cn/img/?rand=82317"
-tag: 软件
+tag: Run
 permalink: SearchFile/run/lowrun.html
 ---
 

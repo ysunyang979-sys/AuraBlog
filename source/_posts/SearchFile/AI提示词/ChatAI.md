@@ -1,7 +1,7 @@
 ---
 title: ChatAI
 cover: "https://img.netbian.com/file/2021/0511/224f99e051fda325f914b0132044c4b4.jpg"
-tag: AI
+tag: AI提示词
 permalink: SearchFile/AI提示词/ChatAI.html
 ---
 

@@ -1,10 +1,9 @@
 ---
-title: 一键搭建多个协议节点教程
+title: 多协议节点搭建
 cover: "https://api.kdcc.cn/img/?rand=46894"
 tag: 科学上网
 permalink: SearchFile/create/bn.html
 ---
-
 
 
 ***

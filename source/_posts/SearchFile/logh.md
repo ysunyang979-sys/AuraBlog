@@ -1,7 +1,6 @@
 ---
-title: 358966 No Oo Oo Mo
+title: Clash Yaml
 cover: "https://img.top/api/anime?rand=20182"
-tag: 科学上网
 password: 358966
 permalink: SearchFile/logh.html
 ---

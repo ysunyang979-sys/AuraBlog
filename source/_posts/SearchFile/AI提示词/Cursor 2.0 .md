@@ -1,7 +1,7 @@
 ---
 title: Cursor 2.0
 cover: "https://p2.itc.cn/images01/20201025/be5556db23ae4f91b12cec63aa7f0963.jpeg"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AI提示词/Cursor 2.0 .html
 ---
 

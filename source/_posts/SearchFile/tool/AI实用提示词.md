@@ -1,7 +1,7 @@
 ---
 title: AI实用提示词
 cover: "https://img.top/api/anime?rand=10098"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/tool/AI实用提示词.html
 ---
 

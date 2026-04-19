@@ -1,7 +1,7 @@
 ---
 title: 自建hysteria教程
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=37568"
-tag: 科学上网
+tag: 节点搭建
 permalink: SearchFile/create/hy.html
 ---
 

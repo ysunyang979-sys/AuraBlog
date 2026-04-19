@@ -1,7 +1,7 @@
 ---
 title: 多协议节点搭建
 cover: "https://api.kdcc.cn/img/?rand=46894"
-tag: 科学上网
+tag: 节点搭建
 permalink: SearchFile/create/bn.html
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Gemini Skills
 cover: "https://img.top/api/anime?rand=69671"
-
+tag: AI
 permalink: gemini.html
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: AI使用
 cover: "https://img.top/api/anime?rand=68261"
-tag: 软件
+tag: AI
 permalink: SearchFile/askai.html
 ---
 

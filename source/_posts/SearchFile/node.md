@@ -1,7 +1,7 @@
 ---
 title: 机场节点购买
 cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=33457"
-tag: 软件
+tag: 科学上网
 permalink: SearchFile/node.html
 ---
 

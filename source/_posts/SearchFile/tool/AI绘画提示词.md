@@ -1,7 +1,7 @@
 ---
 title: AI绘画提示词
 cover: "https://img.top/api/anime?rand=64622"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/tool/AI绘画提示词.html
 ---
 

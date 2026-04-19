@@ -1,10 +1,16 @@
 ---
 title: 实用网站
 cover: "https://www.dmoe.cc/test.php?rand=57917"
-tag: 软件
+tag: 网站
 permalink: SearchFile/网站/ssit.html
 ---
 
+## 个人Vercel网站
+
+<a href="https://www.opera.com/zh-cn/features/pinboards" class="btn">pinboards(Opera浏览器)</a><a href="https://wormhole.app" class="btn">文件传输（24H会过期）</a><a href="https://358966.xyz" class="btn">伊苏存储</a> <a href="https://yimg.ysunyang.dpdns.org" class="btn">AI绘画生成器（密码：ysun744）</a><a href="https://yprt.vercel.app/zh" class="btn">AI绘画提示词生成器</a><a href="https://ycha.vercel.app" class="btn">论文查重</a><a href="https://yhep.vercel.app" class="btn">协助写论文提示词</a>
+<a href="https://ysub.vercel.app" class="btn">订阅转换器</a><a href="https://ydraw.vercel.app" class="btn">在线白板</a><a href="https://ymotion-two.vercel.app" class="btn">快捷绑定</a><a href="http://3.82.113.92:5678" class="btn">n8n(ProtonMeOoOo)</a><a href="https://yapi-eight.vercel.app" class="btn">API合集</a><a href="https://wangrongsheng.github.io/awesome-LLM-resources" class="btn">LLM学习</a><a href="https://pinboard.opera.com/view/fca66a9b-0c2a-44b9-b870-d3eb5b9104c0" class="btn">AI工具</a><a href="https://pinboard.opera.com/view/f892bfc7-0fe4-428f-83f3-959b817f7096" class="btn">网站</a><a href="https://pinboard.opera.com/" class="btn">pinboards</a>
+
+## 实用网站
 <a href="https://roadmap.sh/dashboard" class="btn">Roadmap</a>学习路线
 <a href="https://fmhy.net" class="btn">Free Media Heck Yeah</a>互联网上最大的免费资源导航百科，包含影视、软件、书籍等各类资源。
 <a href="https://theresanaiforthat.com/ai/thea/#pricing-options" class="btn">There's An AI For That</a>极其全面的 AI 工具数据库，可以根据需求搜索几乎所有现有的 AI 应用。
@@ -26,3 +32,4 @@ permalink: SearchFile/网站/ssit.html
 <a href="https://wormhole.app" class="btn">Wormhole</a>极速、私密且端到端加密的超大文件传输工具，链接限时即焚。
 <a href="https://asoftmurmur.com" class="btn">A Soft Murmur</a>环境白噪音生成器，可以混合雨声、雷声、风声等帮助专注或入眠。
 <a href="https://skillsmp.com/" class="btn">SkillSMP</a>技能学习与实践平台，旨在通过结构化的方式提升个人专业能力。
+

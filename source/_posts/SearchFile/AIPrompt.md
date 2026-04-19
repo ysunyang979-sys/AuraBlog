@@ -1,7 +1,7 @@
 ---
 title: 高级AI提示词精选
 cover: "https://api.kdcc.cn/img/?rand=4514"
-tag: 软件
+tag: AI提示词
 permalink: SearchFile/AIPrompt.html
 ---
 

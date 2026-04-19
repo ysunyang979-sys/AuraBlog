@@ -1,7 +1,7 @@
 ---
 title: ProxySU教程
 cover: "https://www.dmoe.cc/test.php?rand=47163"
-tag: 科学上网
+tag: 节点搭建
 
 permalink: SearchFile/create/psu.html
 ---

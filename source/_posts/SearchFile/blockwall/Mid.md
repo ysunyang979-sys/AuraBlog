@@ -8,7 +8,7 @@ permalink: SearchFile/blockwall/Mid.html
 
 >如果有谷歌账号需要登录，则自己搭建网络环境
 
-###### 教程1
+# 教程
 
 >准备：
 <a href="https://dash.cloudflare.com/sign-up" class="btn">cloudflare账号</a><a href="/SearchFile/blockwall/domian.html" class="btn">免费域名</a><a href="https://1024tools.com/uuid" class="btn">UUID变量值</a>

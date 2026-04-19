@@ -1,5 +1,5 @@
 ---
-title: Gemini 3
+title: Gemini 3 应用
 cover: "https://api.kdcc.cn/img/?rand=73348"
 tag: AI
 permalink: SearchFile/AI/Gemini copy.html

@@ -1,7 +1,7 @@
 ---
 title: 自建ss教程
 cover: "https://api.paugram.com/wallpaper/?rand=71656"
-tag: 科学上网
+tag: 节点搭建
 permalink: SearchFile/create/ss.html
 ---
 

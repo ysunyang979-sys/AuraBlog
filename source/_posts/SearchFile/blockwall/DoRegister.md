@@ -4,8 +4,13 @@ cover: "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images?rand=82296"
 tag: 科学上网
 permalink: SearchFile/blockwall/DoRegister.html
 ---
+
+
+
 >准备网站：
-<a href="https://www.cloudflare.com/zh-cn/products/registrar/" class="btn">CloudFlare账号</a><a href="https://www.dnshe.com" class="btn">域名注册（de5.net）</a>
+<a href="https://www.cloudflare.com/zh-cn/products/registrar/" class="btn">CloudFlare账号</a>
+免费域名：<a href="https://dash.domain.digitalplat.org/" class="btn">Digitalplat</a><a href="https://my.dnshe.com/clientarea.php" class="btn">De5</a>
+
 
 `下面我将一步一步的进行教学这个过程`
 
